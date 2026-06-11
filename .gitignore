@@ -1,49 +1,34 @@
-# History files
-.Rhistory
-.Rapp.history
+# --- Quarto ---
+/.quarto/
+*_files/
+/site_libs/
 
-# Session Data files
-.RData
-.RDataTmp
+# Rendered site output.
+# NOTE: We are NOT ignoring /docs/ because we commit the rendered site
+# and let Netlify serve it directly (no build step needed for R).
+# If you switch to having Netlify run `quarto render`, uncomment the next line:
+# /docs/
 
-# User-specific files
-.Ruserdata
-
-# Example code in package build process
-*-Ex.R
-
-# Output files from R CMD build
-/*.tar.gz
-
-# Output files from R CMD check
-/*.Rcheck/
-
-# RStudio files
+# --- R ---
 .Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+.Rapp.history
+*.Rproj.bak
 
-# produced vignettes
-vignettes/*.html
-vignettes/*.pdf
+# --- Editors / IDEs ---
+.idea/
+.vscode/
+*.swp
 
-# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
-.httr-oauth
+# --- OS junk ---
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+Desktop.ini
 
-# knitr and R markdown default cache directories
-*_cache/
-/cache/
-
-# Temporary files created by R markdown
-*.utf8.md
-*.knit.md
-
-# R Environment Variables
-.Renviron
-
-# pkgdown site
-docs/
-
-# translation temp files
-po/*~
-
-# RStudio Connect folder
-rsconnect/
+# --- Misc ---
+.positai
+*.log
