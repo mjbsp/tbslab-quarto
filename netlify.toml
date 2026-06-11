@@ -1,0 +1,18 @@
+# Quarto site served from the committed /docs/ folder.
+# No build command: we commit the rendered site, so Netlify just publishes it.
+# (This avoids needing R available on Netlify's build image.)
+[build]
+  publish = "docs"
+
+# If you'd rather have Netlify build the site itself, replace the block above with:
+#   [build]
+#     command = "quarto render"
+#     publish = "docs"
+# and ensure Quarto + R are installed in the build environment.
+
+# Example redirects for old Hugo URLs (uncomment / edit as needed so
+# existing external links don't break):
+# [[redirects]]
+#   from = "/project/worldviewconflict/"
+#   to   = "/projects.html"
+#   status = 301
