@@ -33,5 +33,5 @@ Find more at my [personal website](https://abigailcassario.github.io).
 #| warning: false
 #| message: false
 source("../../_pubs.R")
-print_person_pubs("cassario", path = "../../pubs.csv")
+print_person_pubs("cassario", path = "../../pubs.csv", heading = "Lab Publications")
 ```

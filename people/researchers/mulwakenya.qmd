@@ -37,5 +37,5 @@ Find me at my [personal website](https://kenyamulwa.wordpress.com).
 #| warning: false
 #| message: false
 source("../../_pubs.R")
-print_person_pubs("kenya", path = "../../pubs.csv")
+print_person_pubs("kenya", path = "../../pubs.csv", heading = "Lab Publications")
 ```
