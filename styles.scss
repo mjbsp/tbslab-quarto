@@ -1,0 +1,124 @@
+/*-- scss:defaults --*/
+// ---- Dark theme ----
+$body-bg:    #000000;
+$body-color: #ffffff;
+
+$pink:       #ff6699;   // original site accent
+$primary:    #ff6699;
+$link-color: #ff6699;
+
+
+$font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$headings-font-weight: 600;
+
+// card theming (dark)
+$card-bg: #0d0d0d;
+$card-border-color: #2a2a2a;
+
+/*-- scss:rules --*/
+body { background: #000; color: #fff; }
+
+// Links pink everywhere
+a, a:visited { color: $pink; }
+a:hover { color: lighten($pink, 12%); }
+
+// Headings & body text white
+h1, h2, h3, h4, h5, h6, p, li, td, th, .quarto-title, strong { color: #fff; }
+
+// Navbar
+.navbar {
+  background: #000 !important;
+  border-bottom: 3px solid $pink;
+}
+.navbar .navbar-nav .nav-link,
+.navbar .navbar-brand { color: #fff !important; }
+.navbar .navbar-nav .nav-link:hover { color: $pink !important; }
+
+// ---- Homepage ----
+.lab-hero {
+  text-align: center;
+  margin: 1.5rem 0 2rem;
+  img { max-height: 240px; width: auto; max-width: 100%; }
+}
+.lab-lead {
+  font-size: 1.2rem; line-height: 1.6;
+  max-width: 760px; margin: 0 auto 1.5rem; text-align: center; color: #fff;
+}
+.lab-affil { text-align: center; color: #bbb; margin-bottom: 2rem; }
+.lab-affil a { color: $pink; text-decoration: none; font-weight: 600; }
+
+h2.lab-section {
+  border-bottom: 2px solid #333;
+  padding-bottom: .3rem; margin-top: 2.5rem; color: #fff;
+}
+
+// ---- People / project cards ----
+.card {
+  background: $card-bg;
+  border: 1px solid $card-border-color;
+  text-align: left;                 // left-justify card text
+  transition: box-shadow .15s ease;
+}
+.card:hover { box-shadow: 0 4px 16px rgba(255,102,153,.18); }
+.card-body { text-align: left; }
+.card .card-title, .card .card-text, .card a { text-align: left; }
+
+// Round avatars, centered above the (left-aligned) text
+#researchers .card-img-top,
+#mascots .card-img-top {
+  border-radius: 50%;
+  width: 170px; height: 170px;
+  object-fit: cover;
+  margin: 1rem auto .25rem;
+  display: block;
+}
+
+// Put the about/links row immediately under the photo
+.about-links, .card .about-links {
+  margin: .4rem 0 .6rem;
+  display: flex; flex-wrap: wrap; gap: .4rem;
+  justify-content: flex-start;
+}
+.about-link, .card .about-link {
+  color: $pink !important;
+}
+
+// ---- Publications ----
+.pub-year {
+  color: $pink;
+  border-bottom: 2px solid #333;
+  padding-bottom: .2rem; margin-top: 1.8rem;
+}
+ul.pub-list { list-style: none; padding-left: 0; }
+ul.pub-list > li { margin-bottom: 1rem; line-height: 1.5; color: #fff; }
+ul.pub-list a { color: $pink; font-weight: 600; text-decoration: none; }
+ul.pub-list a:hover { text-decoration: underline; }
+
+// tables (alumni)
+.table { color: #fff; }
+.table a { color: $pink; }
+
+// Homepage hero social icons
+.hero-socials a {
+  font-size: 1.5rem; margin: 0 .4rem; color: $pink !important;
+  text-decoration: none;
+}
+.hero-socials a:hover { color: lighten($pink, 12%); }
+.lab-hero .hero-socials a { display: inline-block; margin-top: .6rem; }
+
+// Project page figures
+.project-figure {
+  display: block;
+  max-width: 480px;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 1.5rem;
+  border-radius: 4px;
+}
+figure.figure { text-align: center; }       // center the figure block
+figcaption, .figure-caption {
+  color: #bbb !important;
+  font-size: .9rem;
+  text-align: center;
+  margin-top: .4rem;
+}

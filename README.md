@@ -1,6 +1,6 @@
-# The Belief Systems Laboratory
+Built with lots of help from Claude Opus 4.8
 
-Developed from my old Hugo hosted website with the help of Claude Opus 4.8
+# The Belief Systems Laboratory
 
 Source for [tbslaboratory.com](https://tbslaboratory.com), built with [Quarto](https://quarto.org).
 Publications render through R from a spreadsheet.

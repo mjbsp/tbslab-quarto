@@ -1,0 +1,48 @@
+---
+title: "The Lab"
+toc: false
+listing:
+  - id: researchers
+    contents: "people/researchers/*.qmd"
+    type: grid
+    grid-columns: 3
+    image-height: 180px
+    fields: [image, title, subtitle]
+    sort: "sortby"
+    field-display-names:
+      subtitle: ""
+  - id: mascots
+    contents: "people/mascots/*.qmd"
+    type: grid
+    grid-columns: 3
+    image-height: 180px
+    fields: [image, title, subtitle]
+    sort: "sortby"
+    field-display-names:
+      subtitle: ""
+---
+
+## Researchers {.lab-section}
+
+::: {#researchers}
+:::
+
+## Mascots {.lab-section}
+
+::: {#mascots}
+:::
+
+## Alumni {.lab-section}
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+library(readr); library(knitr)
+alum <- read_csv("people/alumni.csv", show_col_types = FALSE)
+alum$Name <- ifelse(is.na(alum$Link) | alum$Link == "",
+                    alum$Name,
+                    sprintf('<a href="%s">%s</a>', alum$Link, alum$Name))
+kable(alum[, c("Name","Role")], format = "html", escape = FALSE,
+      col.names = c("", ""), table.attr = 'class="table"')
+```

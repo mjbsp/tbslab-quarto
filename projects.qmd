@@ -1,0 +1,19 @@
+---
+title: "Projects"
+toc: false
+listing:
+  id: project-listing-full
+  contents: "projects/*.qmd"
+  type: grid
+  grid-columns: 2
+  image-height: 200px
+  fields: [image, title, subtitle]
+  sort: "sortby"
+  field-display-names:
+    subtitle: ""
+---
+
+Our research spans several connected lines of work.
+
+::: {#project-listing-full}
+:::

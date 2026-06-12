@@ -1,0 +1,14 @@
+---
+title: "Publications"
+toc: true
+toc-location: right
+---
+
+```{r}
+#| echo: false
+#| results: asis
+#| warning: false
+#| message: false
+source("_pubs.R")
+print_pubs_by_year(load_pubs())
+```

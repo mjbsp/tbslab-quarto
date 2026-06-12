@@ -1,0 +1,29 @@
+[
+  {
+    "listing": "/people.html",
+    "items": [
+      "/people/researchers/brandtmark.html",
+      "/people/researchers/cassarioabby.html",
+      "/people/researchers/mulwakenya.html",
+      "/people/mascots/loempia.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/projects/beliefsystemdynamics.html",
+      "/projects/lifeexperiences.html",
+      "/projects/worldviewconflict.html",
+      "/projects/improvingpsychsci.html"
+    ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": [
+      "/projects/beliefsystemdynamics.html",
+      "/projects/lifeexperiences.html",
+      "/projects/worldviewconflict.html",
+      "/projects/improvingpsychsci.html"
+    ]
+  }
+]

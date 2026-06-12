@@ -1,0 +1,11 @@
+---
+title: "Loempia"
+subtitle: "Mascot"
+image: ../../img/loempia.jpg
+sortby: "1"
+about:
+  template: trestles
+  image: ../../img/loempia.jpg
+---
+
+I am interested in doing small crimes around the house, including cyber crimes (knocking the mouse off the desk), environmental crimes (eating the plants), and property crimes (scratching the chair).

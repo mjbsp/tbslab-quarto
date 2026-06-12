@@ -1,0 +1,34 @@
+project:
+  type: website
+  output-dir: docs
+
+execute:
+  freeze: auto
+
+website:
+  title: "The Belief Systems Laboratory"
+  description: "The Belief Systems Laboratory at Michigan State University"
+  site-url: https://tbslaboratory.com
+  repo-url: https://github.com/mjbsp/tbslab-quarto
+  navbar:
+    background: dark
+    logo: img/logo.png
+    title: false
+    left:
+      - href: index.qmd
+        text: Home
+      - href: people.qmd
+        text: People
+      - href: projects.qmd
+        text: Projects
+      - href: publications.qmd
+        text: Publications
+
+format:
+  html:
+    link-external-newwindow: true
+    theme: [darkly, styles.scss]
+    toc: false
+    page-layout: full
+    grid:
+      body-width: 1000px
