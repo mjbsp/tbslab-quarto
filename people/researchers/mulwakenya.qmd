@@ -30,3 +30,12 @@ In my free time I enjoy playing video games, watching sports (particularly the N
 
 Find me at my [personal website](https://kenyamulwa.wordpress.com).
 
+
+```{r}
+#| echo: false
+#| results: asis
+#| warning: false
+#| message: false
+source("../../_pubs.R")
+print_person_pubs("kenya", path = "../../pubs.csv")
+```
