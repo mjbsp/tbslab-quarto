@@ -54,3 +54,14 @@ pubs_featured <- function(df, n = 5) {
   else
     dplyr::slice_head(df, n = n)
 }
+
+# Print a "Publications" section for one person, tagged in the `people` column.
+# If the person has no tagged publications, prints NOTHING (no heading at all).
+print_person_pubs <- function(tag, path = "../../pubs.csv",
+                              heading = "Publications", level = 2) {
+  df <- load_pubs(path)
+  matched <- pubs_tagged(df, tag, column = "people")
+  if (nrow(matched) == 0) return(invisible())
+  cat(sprintf("\n%s %s\n\n", strrep("#", level), heading))
+  print_pub_list(matched)
+}
