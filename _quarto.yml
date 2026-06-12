@@ -2,9 +2,6 @@ project:
   type: website
   output-dir: docs
 
-execute:
-  freeze: auto
-
 website:
   title: "The Belief Systems Laboratory"
   description: "The Belief Systems Laboratory at Michigan State University"
