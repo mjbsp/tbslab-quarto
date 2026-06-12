@@ -47,7 +47,7 @@ h1, h2, h3, h4, h5, h6, p, li, td, th, .quarto-title, strong { color: #fff; }
 // ---- Homepage hero (logo left, text right) ----
 .hero-row {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 2.5rem;
   margin: 1.5rem 0 2.5rem;
 }
@@ -62,6 +62,7 @@ h1, h2, h3, h4, h5, h6, p, li, td, th, .quarto-title, strong { color: #fff; }
   line-height: 1.6;
   color: #fff;
   p { color: #fff; }
+  p:first-child { margin-top: 0; }
   a { color: $pink; font-weight: 600; text-decoration: none; }
 }
 // Stack vertically on narrow screens
