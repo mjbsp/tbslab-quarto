@@ -5,11 +5,13 @@ image: ../img/proj-lifeexperiences.png
 sortby: 2
 toc: true
 ---
-![Figure S4 from Brandt et al.](../img/proj-lifeexperiences.png){.project-figure fig-alt="Figure S4 from Brandt et al."}
+![Figure S4 from Brandt et al., 2025](../img/proj-lifeexperiences.png){.project-figure fig-alt="Figure S4 from Brandt et al., 2025"}
 
 
 
-Adult political attitudes are highly stable (Brandt & Morgan, 2022; Turner-Zwinkels & Brandt, 2025), but they do change. What kinds of experiences cause attitude change? Do the same experiences change attitudes in the same way for everyone? Are experiences more impactful at certain points in our lives? How can be leverage life experiences to promote democratic resilience? These are the types of questions that we aim to answer in our  projects.  
+Adult political attitudes are highly stable (Brandt & Morgan, 2022; Turner-Zwinkels & Brandt, 2025), but they do change. What kinds of experiences cause attitude change? Do the same experiences change attitudes in the same way for everyone? Are experiences more impactful at certain points in our lives? Are some attitudes more likely to change in response to our experiences than others? How can we leverage life experiences to promote democratic resilience? These are the types of questions that we aim to answer in our  projects. 
+
+For example, we conducted one of the most comprehensive assessments of political attitude change (in the USA) in response to the COVID-19 pandemic (Brandt et al., 2025). We found that the pandemic made people feel stressed out and worried about the economoy. However, most attitudes did not change. The only attitudes that meaningfully changed were those about the economy. That is, despite a historical, world altering event, most people didn't change their minds about their political world. 
 
 ## Related publications {.lab-section}
 
