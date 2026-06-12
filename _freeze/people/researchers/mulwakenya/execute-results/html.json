@@ -1,0 +1,15 @@
+{
+  "hash": "c78b061dcbdfb5ea8f146d91c26dc4aa",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Kenya Mulwa\"\nsubtitle: \"PhD Student\"\nimage: ../../img/mulwakenya.jpg\nsortby: \"3\"\nabout:\n  template: trestles\n  image: ../../img/mulwakenya.jpg\n  links:\n    - icon: envelope\n      text: Email\n      href: mailto:mulwaken@msu.edu\n    - icon: person\n      text: Website\n      href: https://kenyamulwa.wordpress.com\n    - icon: twitter\n      text: Twitter\n      href: https://twitter.com/MulwaKenya\n    - icon: file-earmark-text\n      text: CV\n      href: https://kenyamulwa.wordpress.com/wp-content/uploads/2024/04/kenya-mulwa-cv.pdf\n---\n\nI’m a third year PhD student at Michigan State University and a member of the Beliefs Systems Lab. My research interests include social/moral decision-making and attributions to discrimination under conditions of uncertainty, impression formation, stereotyping, and intergroup relations more broadly. I’m also interested in advancing and promoting open science practices, philosophy of psychological science, and quantitative/qualitative research methods in psychology. \n\nBefore coming to MSU, I received a bachelor’s degree in Psychology at Oklahoma State in 2021, and a master’s degree in Cognitive/Affective Psychology at University of Wisconsin Oshkosh in 2023.\n\nIn my free time I enjoy playing video games, watching sports (particularly the NFL), and attending performative arts shows like plays, concerts, and stand-up comedy! \n\n\nFind me at my [personal website](https://kenyamulwa.wordpress.com).\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
