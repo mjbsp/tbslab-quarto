@@ -34,18 +34,40 @@ h1, h2, h3, h4, h5, h6, p, li, td, th, .quarto-title, strong { color: #fff; }
 .navbar .navbar-brand { color: #fff !important; }
 .navbar .navbar-nav .nav-link:hover { color: $pink !important; }
 
-// ---- Homepage ----
-.lab-hero {
+// ---- Homepage affiliation / keywords header ----
+.lab-affil {
   text-align: center;
-  margin: 1.5rem 0 2rem;
-  img { max-height: 240px; width: auto; max-width: 100%; }
+  color: #bbb;
+  margin: 1rem 0 1.5rem;
+  line-height: 1.6;
+  a { color: $pink; text-decoration: none; font-weight: 600; }
 }
-.lab-lead {
-  font-size: 1.2rem; line-height: 1.6;
-  max-width: 760px; margin: 0 auto 1.5rem; text-align: center; color: #fff;
+
+// ---- Homepage hero (logo left, text right) ----
+.hero-row {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin: 1.5rem 0 2.5rem;
 }
-.lab-affil { text-align: center; color: #bbb; margin-bottom: 2rem; }
-.lab-affil a { color: $pink; text-decoration: none; font-weight: 600; }
+.hero-left {
+  flex: 0 0 auto;
+  text-align: center;
+  img { max-height: 230px; width: auto; max-width: 100%; }
+}
+.hero-right {
+  flex: 1 1 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #fff;
+  p { color: #fff; }
+  a { color: $pink; font-weight: 600; text-decoration: none; }
+}
+// Stack vertically on narrow screens
+@media (max-width: 768px) {
+  .hero-row { flex-direction: column; gap: 1.25rem; text-align: center; }
+  .hero-right { text-align: center; }
+}
 
 h2.lab-section {
   border-bottom: 2px solid #333;
@@ -104,7 +126,7 @@ ul.pub-list a:hover { text-decoration: underline; }
   text-decoration: none;
 }
 .hero-socials a:hover { color: lighten($pink, 12%); }
-.lab-hero .hero-socials a { display: inline-block; margin-top: .6rem; }
+.hero-left .hero-socials a { display: inline-block; margin-top: .6rem; }
 
 // Project page figures
 .project-figure {
