@@ -14,7 +14,7 @@ listing:
 ---
 :::: {.hero-row}
 ::: {.hero-left}
-![](img/hero-avatar.png){fig-alt="The Belief Systems Laboratory"}
+![](img/hero-avatar-cropped.png){fig-alt="The Belief Systems Laboratory"}
 
 ```{=html}
 <div class="hero-socials">
