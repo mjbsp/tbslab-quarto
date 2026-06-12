@@ -24,7 +24,7 @@ website:
       - href: publications.qmd
         text: Publications
     right:
-      - text: "political animosity | belief systems | attitude change"
+      - text: "political animosity · belief systems · attitude change"
         href: ""
 
 format:
