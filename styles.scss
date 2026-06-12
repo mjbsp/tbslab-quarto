@@ -156,3 +156,53 @@ figcaption, .figure-caption {
   pointer-events: none;        // not clickable
   font-weight: 400;
 }
+
+// ---- Alumni accordion ----
+.alumni-accordion { border: none; margin-top: 1rem; }
+.alumni-accordion .accordion-item {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #2a2a2a;
+}
+.alumni-accordion .accordion-header { display: flex; align-items: center; }
+
+// Clickable name button
+.alumni-accordion .alum-name {
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #fff !important;
+  font-size: 1.05rem;
+  padding: .7rem 0;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: baseline;
+  gap: .6rem;
+}
+.alumni-accordion .accordion-button:not(.collapsed) { color: $pink !important; }
+.alumni-accordion .accordion-button:focus { box-shadow: none; }
+.alumni-accordion .alum-name-text { font-weight: 600; }
+.alumni-accordion .alum-role { color: #bbb; font-size: .9rem; }
+
+// Static (no-publications) row: no pointer, no caret
+.alumni-accordion .alum-static { cursor: default; }
+
+// Recolor Bootstrap's caret to be visible on black
+.alumni-accordion .accordion-button::after {
+  filter: invert(60%);
+}
+.alumni-accordion .accordion-button:not(.collapsed)::after {
+  filter: invert(45%) sepia(80%) saturate(2000%) hue-rotate(300deg);
+}
+
+// Scholar icon beside the name
+.alum-scholar {
+  color: $pink !important;
+  font-size: 1.1rem;
+  padding: 0 .25rem;
+  flex: 0 0 auto;
+}
+.alum-scholar:hover { color: lighten($pink, 12%); }
+
+// Expanded publication list
+.alumni-accordion .accordion-body { padding: .25rem 0 1rem; }
+.alumni-accordion .accordion-body .pub-list > li { color: #fff; }

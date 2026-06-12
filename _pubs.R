@@ -58,10 +58,62 @@ pubs_featured <- function(df, n = 5) {
 # Print a "Publications" section for one person, tagged in the `people` column.
 # If the person has no tagged publications, prints NOTHING (no heading at all).
 print_person_pubs <- function(tag, path = "../../pubs.csv",
-                              heading = "Publications", level = 2) {
+                              heading = "Lab Publications", level = 2) {
   df <- load_pubs(path)
   matched <- pubs_tagged(df, tag, column = "people")
   if (nrow(matched) == 0) return(invisible())
   cat(sprintf("\n%s %s\n\n", strrep("#", level), heading))
   print_pub_list(matched)
+}
+
+# Build the alumni accordion. Reads an alumni CSV (Name, Role, Link, Tag) and,
+# for each alum, makes a clickable row that expands their Lab Publications.
+# Alumni with no tagged publications render as a plain, non-expanding row.
+# A Google Scholar icon (from the Link column) sits beside each name as a
+# separate link.
+print_alumni_accordion <- function(alumni_path = "people/alumni.csv",
+                                    pubs_path = "pubs.csv") {
+  alum <- load_pubs(alumni_path)
+  pubs <- load_pubs(pubs_path)
+
+  scholar_icon <- function(url) {
+    if (is.na(url) || url == "") return("")
+    sprintf(' <a class="alum-scholar" href="%s" target="_blank" rel="noopener" title="Google Scholar"><i class="bi bi-mortarboard-fill"></i></a>', url)
+  }
+
+  cat('<div class="accordion alumni-accordion" id="alumniAccordion">')
+  for (i in seq_len(nrow(alum))) {
+    name <- alum$Name[i]
+    role <- if ("Role" %in% names(alum) && !is.na(alum$Role[i])) alum$Role[i] else ""
+    link <- if ("Link" %in% names(alum)) alum$Link[i] else NA
+    tag  <- if ("Tag"  %in% names(alum)) alum$Tag[i]  else NA
+
+    their_pubs <- if (!is.na(tag) && tag != "")
+      pubs_tagged(pubs, tag, column = "people") else pubs[0, ]
+    has_pubs <- nrow(their_pubs) > 0
+    id <- paste0("alum", i)
+
+    cat('<div class="accordion-item">')
+    cat('<div class="accordion-header alum-row">')
+    if (has_pubs) {
+      cat(sprintf(
+        '<button class="accordion-button collapsed alum-name" type="button" data-bs-toggle="collapse" data-bs-target="#%s" aria-expanded="false" aria-controls="%s"><span class="alum-name-text">%s</span><span class="alum-role">%s</span></button>',
+        id, id, name, role))
+    } else {
+      # No publications: plain, non-expanding row (no caret, no toggle)
+      cat(sprintf(
+        '<div class="alum-name alum-static"><span class="alum-name-text">%s</span><span class="alum-role">%s</span></div>',
+        name, role))
+    }
+    cat(scholar_icon(link))
+    cat('</div>')  # accordion-header
+
+    if (has_pubs) {
+      cat(sprintf('<div id="%s" class="accordion-collapse collapse" data-bs-parent="#alumniAccordion"><div class="accordion-body">', id))
+      print_pub_list(their_pubs)
+      cat('</div></div>')
+    }
+    cat('</div>')  # accordion-item
+  }
+  cat('</div>')  # accordion
 }
