@@ -13,7 +13,6 @@ listing:
       subtitle: ""
 ---
 :::: {.hero-row}
-
 ::: {.hero-left}
 ![](img/hero-avatar.png){fig-alt="The Belief Systems Laboratory"}
 
