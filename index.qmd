@@ -15,7 +15,6 @@ listing:
 ::: {.lab-affil}
 [Department of Psychology](https://psychology.msu.edu/){target="_blank" rel="noopener"} ·
 [Michigan State University](https://msu.edu/){target="_blank" rel="noopener"}
-<br>political animosity | belief systems | attitude change
 :::
 :::: {.hero-row}
 
@@ -52,7 +51,7 @@ Click here to learn about ways to [join the lab](join.qmd)!
 
 ## Selected Publications {.lab-section}
 
-A few key papers. Check out [all of our publications](publications.qmd)!
+A few recent papers. Check out [all of our publications](publications.qmd)!
 
 ```{r}
 #| echo: false

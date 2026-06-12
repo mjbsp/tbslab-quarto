@@ -2,6 +2,9 @@ project:
   type: website
   output-dir: docs
 
+execute:
+  freeze: auto
+
 website:
   title: "The Belief Systems Laboratory"
   description: "The Belief Systems Laboratory at Michigan State University"
@@ -20,6 +23,9 @@ website:
         text: Projects
       - href: publications.qmd
         text: Publications
+    right:
+      - text: "political animosity | belief systems | attitude change"
+        href: ""
 
 format:
   html:

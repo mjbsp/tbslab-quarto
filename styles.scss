@@ -144,3 +144,13 @@ figcaption, .figure-caption {
   text-align: center;
   margin-top: .4rem;
 }
+
+
+// Right-aligned research keywords in the navbar (non-clickable tagline)
+.navbar .navbar-nav.ms-auto .nav-link,
+.navbar .navbar-nav.navbar-nav-scroll.ms-auto .nav-link {
+  color: #bbb !important;
+  cursor: default;
+  pointer-events: none;        // not clickable
+  font-weight: 400;
+}
