@@ -17,20 +17,21 @@ listing:
 [Michigan State University](https://msu.edu/){target="_blank" rel="noopener"}
 <br>political animosity | belief systems | attitude change
 :::
-::: {.lab-hero}
+:::: {.hero-row}
+
+::: {.hero-left}
 ![](img/hero-avatar.png){fig-alt="The Belief Systems Laboratory"}
 
 ```{=html}
 <div class="hero-socials">
   <a href="mailto:brandt15@msu.edu" title="Email"><i class="bi bi-envelope-fill"></i></a>
-<a href="https://bsky.app/profile/mjbsp.bsky.social" title="Bluesky" target="_blank" rel="noopener"><i class="bi bi-bluesky"></i></a>
+  <a href="https://bsky.app/profile/mjbsp.bsky.social" title="Bluesky" target="_blank" rel="noopener"><i class="bi bi-bluesky"></i></a>
   <a href="https://www.linkedin.com/in/mark-brandt-4a7b30350/" title="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
 </div>
 ```
 :::
 
-## Who are we? {.lab-section}
-
+::: {.hero-right}
 We are located in the Department of Psychology at Michigan State University. Our
 goal is to understand the causes and consequences of political, religious, and
 moral beliefs that can ultimately be leveraged to reduce conflict and promote a
@@ -40,6 +41,9 @@ and how they structure attitudes and behaviors, how they become moralized, and
 why people adopt them in the first place.
 
 Click here to learn about ways to [join the lab](join.qmd)!
+:::
+
+::::
 
 ## Projects {.lab-section}
 
