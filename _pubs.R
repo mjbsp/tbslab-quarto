@@ -78,7 +78,7 @@ print_alumni_accordion <- function(alumni_path = "people/alumni.csv",
 
   scholar_icon <- function(url) {
     if (is.na(url) || url == "") return("")
-    sprintf(' <a class="alum-scholar" href="%s" target="_blank" rel="noopener" title="Google Scholar"><i class="bi bi-mortarboard-fill"></i></a>', url)
+    sprintf('<a class="alum-scholar" href="%s" target="_blank" rel="noopener" title="Google Scholar"><i class="bi bi-mortarboard-fill"></i></a>', url)
   }
 
   cat('<div class="accordion alumni-accordion" id="alumniAccordion">')
@@ -95,6 +95,7 @@ print_alumni_accordion <- function(alumni_path = "people/alumni.csv",
 
     cat('<div class="accordion-item">')
     cat('<div class="accordion-header alum-row">')
+    cat(scholar_icon(link))
     if (has_pubs) {
       cat(sprintf(
         '<button class="accordion-button collapsed alum-name" type="button" data-bs-toggle="collapse" data-bs-target="#%s" aria-expanded="false" aria-controls="%s"><span class="alum-name-text">%s</span><span class="alum-role">%s</span></button>',
@@ -105,7 +106,6 @@ print_alumni_accordion <- function(alumni_path = "people/alumni.csv",
         '<div class="alum-name alum-static"><span class="alum-name-text">%s</span><span class="alum-role">%s</span></div>',
         name, role))
     }
-    cat(scholar_icon(link))
     cat('</div>')  # accordion-header
 
     if (has_pubs) {

@@ -194,12 +194,14 @@ figcaption, .figure-caption {
   filter: invert(45%) sepia(80%) saturate(2000%) hue-rotate(300deg);
 }
 
-// Scholar icon beside the name
+// Scholar icon beside the name (now on the left)
 .alum-scholar {
   color: $pink !important;
   font-size: 1.1rem;
-  padding: 0 .25rem;
+  padding: 0;
+  margin-right: .65rem;
   flex: 0 0 auto;
+  order: -1;
 }
 .alum-scholar:hover { color: lighten($pink, 12%); }
 
