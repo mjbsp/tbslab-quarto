@@ -26,3 +26,12 @@ Before MSU, I received my BA in political science and psychology from the Univer
 
 Find more at my [personal website](https://abigailcassario.github.io).
 
+
+```{r}
+#| echo: false
+#| results: asis
+#| warning: false
+#| message: false
+source("../../_pubs.R")
+print_person_pubs("cassario", path = "../../pubs.csv")
+```
