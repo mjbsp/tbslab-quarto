@@ -26,7 +26,6 @@ website:
 
 format:
   html:
-    link-external-newwindow: true
     theme: [darkly, styles.scss]
     toc: false
     page-layout: full
