@@ -12,10 +12,6 @@ listing:
     field-display-names:
       subtitle: ""
 ---
-::: {.lab-affil}
-[Department of Psychology](https://psychology.msu.edu/){target="_blank" rel="noopener"} ·
-[Michigan State University](https://msu.edu/){target="_blank" rel="noopener"}
-:::
 :::: {.hero-row}
 
 ::: {.hero-left}
@@ -28,6 +24,11 @@ listing:
   <a href="https://www.linkedin.com/in/mark-brandt-4a7b30350/" title="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
 </div>
 ```
+
+::: {.lab-affil}
+[Department of Psychology](https://psychology.msu.edu/){target="_blank" rel="noopener"}\
+[Michigan State University](https://msu.edu/){target="_blank" rel="noopener"}
+:::
 :::
 
 ::: {.hero-right}
