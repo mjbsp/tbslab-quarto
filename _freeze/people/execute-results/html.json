@@ -1,0 +1,15 @@
+{
+  "hash": "c18cff029bc06540c827a61c2840c18e",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"The Lab\"\ntoc: false\nlisting:\n  - id: researchers\n    contents: \"people/researchers/*.qmd\"\n    type: grid\n    grid-columns: 3\n    image-height: 180px\n    fields: [image, title, subtitle]\n    sort: \"sortby\"\n    field-display-names:\n      subtitle: \"\"\n  - id: mascots\n    contents: \"people/mascots/*.qmd\"\n    type: grid\n    grid-columns: 3\n    image-height: 180px\n    fields: [image, title, subtitle]\n    sort: \"sortby\"\n    field-display-names:\n      subtitle: \"\"\n---\n\n## Researchers {.lab-section}\n\n::: {#researchers}\n:::\n\n## Mascots {.lab-section}\n\n::: {#mascots}\n:::\n\n## Alumni {.lab-section}\n\n\n::: {.cell}\n::: {.cell-output-display}\n`````{=html}\n<table class=\"table\">\n <thead>\n  <tr>\n   <th style=\"text-align:left;\">  </th>\n   <th style=\"text-align:left;\">  </th>\n  </tr>\n </thead>\n<tbody>\n  <tr>\n   <td style=\"text-align:left;\"> <a href=\"https://scholar.google.com/citations?user=gEfRVBQAAAAJ&hl=en\">Felicity Turner-Zwinkels</a> </td>\n   <td style=\"text-align:left;\"> Former Postdoc </td>\n  </tr>\n  <tr>\n   <td style=\"text-align:left;\"> <a href=\"https://scholar.google.com/citations?user=ucLMIqgAAAAJ\">Mehmet Necip Tunç</a> </td>\n   <td style=\"text-align:left;\"> Former PhD Student </td>\n  </tr>\n  <tr>\n   <td style=\"text-align:left;\"> <a href=\"https://scholar.google.com/citations?user=LkWCPEcAAAAJ&hl=en\">Shree Vallabha</a> </td>\n   <td style=\"text-align:left;\"> Former PhD Student </td>\n  </tr>\n  <tr>\n   <td style=\"text-align:left;\"> <a href=\"https://scholar.google.com/citations?user=L-pC60kAAAAJ&hl=en\">Rabia Kodapanakkal</a> </td>\n   <td style=\"text-align:left;\"> Former PhD Student </td>\n  </tr>\n  <tr>\n   <td style=\"text-align:left;\"> <a href=\"https://scholar.google.com/citations?user=F8tXGl0AAAAJ&hl=en\">Nina Spälti</a> </td>\n   <td style=\"text-align:left;\"> Former PhD Student </td>\n  </tr>\n  <tr>\n   <td style=\"text-align:left;\"> <a href=\"https://scholar.google.com/citations?user=PCUapCAAAAAJ&hl=en\">Fieke Wagemans</a> </td>\n   <td style=\"text-align:left;\"> Former PhD Student </td>\n  </tr>\n</tbody>\n</table>\n\n`````\n:::\n:::\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
