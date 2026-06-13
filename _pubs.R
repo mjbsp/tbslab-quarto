@@ -2,7 +2,21 @@
 suppressMessages({library(readr); library(dplyr)})
 
 load_pubs <- function(path = "pubs.csv") {
-  readr::read_csv(path, show_col_types = FALSE)
+  # Read robustly whether the CSV was saved as UTF-8 or Windows/Latin-1.
+  # Try UTF-8 first; if that errors on an invalid byte, fall back to Latin-1.
+  read_with <- function(enc)
+    readr::read_csv(path, show_col_types = FALSE,
+                    locale = readr::locale(encoding = enc))
+  df <- tryCatch(read_with("UTF-8"),
+                 error   = function(e) read_with("latin1"),
+                 warning = function(w) read_with("latin1"))
+  # Declare character columns as UTF-8 so cat()/gsub() don't choke on a
+  # non-UTF-8 session locale (common on Windows).
+  char_cols <- vapply(df, is.character, logical(1))
+  df[char_cols] <- lapply(df[char_cols], function(x) {
+    x <- enc2utf8(x); Encoding(x) <- "UTF-8"; x
+  })
+  df
 }
 
 # Render one <li> for a publication row (content + doi/pdf/code/data links)
