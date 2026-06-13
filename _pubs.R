@@ -66,6 +66,40 @@ print_person_pubs <- function(tag, path = "../../pubs.csv",
   print_pub_list(matched)
 }
 
+# Build a simple roster (Research Master's students, Bachelor RAs, etc.).
+# Reads a CSV with columns: Name, Years (optional), Link (optional), Tag (optional).
+# Each person is a plain row: name, optional year-range, then small badge icons:
+#   - mortarboard icon (links to Link) if they have a profile
+#   - paper icon (non-clickable badge) if they have lab publications (Tag matches
+#     a non-empty `people` cell in pubs.csv)
+# Most rows are just a name; icons appear only when real.
+print_roster <- function(csv_path, pubs_path = "pubs.csv") {
+  people <- load_pubs(csv_path)
+  pubs   <- load_pubs(pubs_path)
+
+  cat('<ul class="roster">')
+  for (i in seq_len(nrow(people))) {
+    name  <- people$Name[i]
+    years <- if ("Years" %in% names(people) && !is.na(people$Years[i])) people$Years[i] else ""
+    link  <- if ("Link"  %in% names(people)) people$Link[i] else NA
+    tag   <- if ("Tag"   %in% names(people)) people$Tag[i]  else NA
+
+    has_pubs <- !is.na(tag) && tag != "" &&
+                nrow(pubs_tagged(pubs, tag, column = "people")) > 0
+    has_link <- !is.na(link) && link != ""
+
+    cat('<li class="roster-item">')
+    cat(sprintf('<span class="roster-name">%s</span>', name))
+    if (years != "") cat(sprintf('<span class="roster-years">%s</span>', years))
+    if (has_link)
+      cat(sprintf('<a class="roster-badge roster-scholar" href="%s" target="_blank" rel="noopener" title="Profile"><i class="bi bi-mortarboard-fill"></i></a>', link))
+    if (has_pubs)
+      cat('<span class="roster-badge roster-paper" title="Co-author on lab publications"><i class="bi bi-file-earmark-text-fill"></i></span>')
+    cat('</li>')
+  }
+  cat('</ul>')
+}
+
 # Build the alumni accordion. Reads an alumni CSV (Name, Role, Link, Tag) and,
 # for each alum, makes a clickable row that expands their Lab Publications.
 # Alumni with no tagged publications render as a plain, non-expanding row.
