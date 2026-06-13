@@ -84,13 +84,14 @@ print_person_pubs <- function(tag, path = "../../pubs.csv",
 # alphabetically by Name. Handles Years like "2020", "2018-2020", "2018-2020",
 # or blank (blanks sort last).
 sort_by_recency <- function(df) {
-  yrs <- if ("Years" %in% names(df)) df$Years else rep(NA_character_, nrow(df))
-  end_year <- vapply(yrs, function(y) {
-    if (is.na(y) || y == "") return(-Inf)
-    nums <- as.integer(regmatches(y, gregexpr("[0-9]{4}", y))[[1]])
-    if (length(nums) == 0) return(-Inf)
+  df <- as.data.frame(df, stringsAsFactors = FALSE)
+  yrs <- if ("Years" %in% names(df)) as.character(df$Years) else rep(NA_character_, nrow(df))
+  end_year <- sapply(yrs, function(y) {
+    if (is.na(y) || y == "") return(-1)
+    nums <- as.integer(unlist(regmatches(y, gregexpr("[0-9]{4}", y))))
+    if (length(nums) == 0) return(-1)
     max(nums)            # end year = latest 4-digit number present
-  }, numeric(1))
+  }, USE.NAMES = FALSE)
   df[order(-end_year, df$Name), , drop = FALSE]
 }
 
