@@ -80,6 +80,20 @@ print_person_pubs <- function(tag, path = "../../pubs.csv",
   print_pub_list(matched)
 }
 
+# Sort a people data frame by recency: most recent END year first, ties broken
+# alphabetically by Name. Handles Years like "2020", "2018-2020", "2018-2020",
+# or blank (blanks sort last).
+sort_by_recency <- function(df) {
+  yrs <- if ("Years" %in% names(df)) df$Years else rep(NA_character_, nrow(df))
+  end_year <- vapply(yrs, function(y) {
+    if (is.na(y) || y == "") return(-Inf)
+    nums <- as.integer(regmatches(y, gregexpr("[0-9]{4}", y))[[1]])
+    if (length(nums) == 0) return(-Inf)
+    max(nums)            # end year = latest 4-digit number present
+  }, numeric(1))
+  df[order(-end_year, df$Name), , drop = FALSE]
+}
+
 # Build a simple roster (Research Master's students, Bachelor RAs, etc.).
 # Reads a CSV with columns: Name, Years (optional), Link (optional), Tag (optional).
 # Each person is a plain row: name, optional year-range, then small badge icons:
@@ -88,7 +102,7 @@ print_person_pubs <- function(tag, path = "../../pubs.csv",
 #     a non-empty `people` cell in pubs.csv)
 # Most rows are just a name; icons appear only when real.
 print_roster <- function(csv_path, pubs_path = "pubs.csv") {
-  people <- load_pubs(csv_path)
+  people <- sort_by_recency(load_pubs(csv_path))
   pubs   <- load_pubs(pubs_path)
 
   cat('<ul class="roster">')
@@ -121,7 +135,7 @@ print_roster <- function(csv_path, pubs_path = "pubs.csv") {
 # separate link.
 print_alumni_accordion <- function(alumni_path = "people/alumni.csv",
                                     pubs_path = "pubs.csv") {
-  alum <- load_pubs(alumni_path)
+  alum <- sort_by_recency(load_pubs(alumni_path))
   pubs <- load_pubs(pubs_path)
 
   scholar_icon <- function(url) {
@@ -133,6 +147,8 @@ print_alumni_accordion <- function(alumni_path = "people/alumni.csv",
   for (i in seq_len(nrow(alum))) {
     name <- alum$Name[i]
     role <- if ("Role" %in% names(alum) && !is.na(alum$Role[i])) alum$Role[i] else ""
+    years <- if ("Years" %in% names(alum) && !is.na(alum$Years[i])) alum$Years[i] else ""
+    if (years != "") role <- if (role != "") paste0(role, ", ", years) else years
     link <- if ("Link" %in% names(alum)) alum$Link[i] else NA
     tag  <- if ("Tag"  %in% names(alum)) alum$Tag[i]  else NA
 
