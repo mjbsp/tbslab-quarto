@@ -241,3 +241,18 @@ ul.roster {
   a { color: $pink; text-decoration: none; }
   a:hover { text-decoration: underline; }
 }
+
+// ---- Combined inline roster (Master's & Bachelor's RAs) ----
+.inline-roster {
+  line-height: 2;
+  color: #fff;
+  margin-top: 1rem;
+}
+.inline-roster .roster-name { font-weight: 600; color: #fff; }
+.inline-roster .roster-meta { color: #888; font-weight: 400; }
+.inline-roster .roster-years { color: #888; font-size: .9rem; }
+.inline-roster .roster-badge { font-size: .85rem; margin-left: .15rem; }
+.inline-roster .roster-scholar { color: $pink !important; text-decoration: none; }
+.inline-roster .roster-scholar:hover { color: lighten($pink, 12%); }
+.inline-roster .roster-paper { color: #9aa0a6; }
+.inline-roster-item { white-space: normal; }

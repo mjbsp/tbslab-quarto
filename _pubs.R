@@ -129,6 +129,48 @@ print_roster <- function(csv_path, pubs_path = "pubs.csv") {
   cat('</ul>')
 }
 
+# Combined inline roster: merge one or more people CSVs into a single flowing,
+# comma-separated list (acknowledgments style). Each entry is the name, then
+# years + GS/paper badges in parentheses when present. Sorted by recency
+# (latest end year first, ties alphabetical by name).
+print_inline_roster <- function(csv_paths, pubs_path = "pubs.csv") {
+  frames <- lapply(csv_paths, function(p) {
+    d <- as.data.frame(load_pubs(p), stringsAsFactors = FALSE)
+    for (col in c("Name", "Years", "Link", "Tag"))
+      if (!col %in% names(d)) d[[col]] <- NA_character_
+    d[, c("Name", "Years", "Link", "Tag")]   # align columns before merging
+  })
+  people <- do.call(rbind, frames)
+  people <- sort_by_recency(people)
+  pubs   <- load_pubs(pubs_path)
+
+  entries <- character(0)
+  for (i in seq_len(nrow(people))) {
+    name  <- people$Name[i]
+    years <- if ("Years" %in% names(people) && !is.na(people$Years[i])) people$Years[i] else ""
+    link  <- if ("Link"  %in% names(people)) people$Link[i] else NA
+    tag   <- if ("Tag"   %in% names(people)) people$Tag[i]  else NA
+
+    has_pubs <- !is.na(tag) && tag != "" &&
+                nrow(pubs_tagged(pubs, tag, column = "people")) > 0
+    has_link <- !is.na(link) && link != ""
+
+    # build the parenthetical bits: years, then badges
+    bits <- character(0)
+    if (years != "") bits <- c(bits, sprintf('<span class="roster-years">%s</span>', years))
+    if (has_link)
+      bits <- c(bits, sprintf('<a class="roster-badge roster-scholar" href="%s" target="_blank" rel="noopener" title="Profile"><i class="bi bi-mortarboard-fill"></i></a>', link))
+    if (has_pubs)
+      bits <- c(bits, '<span class="roster-badge roster-paper" title="Co-author on lab publications"><i class="bi bi-file-earmark-text-fill"></i></span>')
+
+    entry <- sprintf('<span class="roster-name">%s</span>', name)
+    if (length(bits) > 0)
+      entry <- paste0(entry, ' <span class="roster-meta">(', paste(bits, collapse = " "), ')</span>')
+    entries <- c(entries, sprintf('<span class="inline-roster-item">%s</span>', entry))
+  }
+  cat('<p class="inline-roster">', paste(entries, collapse = ", "), '</p>')
+}
+
 # Build the alumni accordion. Reads an alumni CSV (Name, Role, Link, Tag) and,
 # for each alum, makes a clickable row that expands their Lab Publications.
 # Alumni with no tagged publications render as a plain, non-expanding row.

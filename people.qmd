@@ -45,26 +45,16 @@ source("_pubs.R")
 print_alumni_accordion(alumni_path = "people/alumni.csv", pubs_path = "pubs.csv")
 ```
 
-## Research Master's Students {.lab-section}
+## Master's and Bachelor's Research Assistants {.lab-section}
 
 ```{r}
 #| echo: false
 #| results: asis
 #| warning: false
 #| message: false
-print_roster("people/research_masters.csv")
-```
-
-## Bachelor Research Assistants {.lab-section}
-
-```{r}
-#| echo: false
-#| results: asis
-#| warning: false
-#| message: false
-print_roster("people/bachelor_ras.csv")
+print_inline_roster("people/research_assistants.csv")
 ```
 
 ```{=html}
-<p class="roster-legend"><i class="bi bi-file-earmark-text-fill"></i> Co-author on lab <a href="publications.html">publications</a></p>
+<p class="roster-legend"><i class="bi bi-mortarboard-fill"></i> Profile &nbsp;·&nbsp; <i class="bi bi-file-earmark-text-fill"></i> Co-author on lab <a href="publications.html">publications</a></p>
 ```
