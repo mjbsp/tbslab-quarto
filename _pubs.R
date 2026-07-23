@@ -8,8 +8,8 @@ load_pubs <- function(path = "pubs.csv") {
     readr::read_csv(path, show_col_types = FALSE,
                     locale = readr::locale(encoding = enc))
   df <- tryCatch(read_with("UTF-8"),
-                 error   = function(e) read_with("latin1"),
-                 warning = function(w) read_with("latin1"))
+                 error   = function(e) read_with("windows-1252"),
+                 warning = function(w) read_with("windows-1252"))
   # Declare character columns as UTF-8 so cat()/gsub() don't choke on a
   # non-UTF-8 session locale (common on Windows).
   char_cols <- vapply(df, is.character, logical(1))
