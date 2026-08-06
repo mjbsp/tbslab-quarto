@@ -13,15 +13,18 @@ about:
     - icon: person
       text: Website
       href: https://kenyamulwa.wordpress.com
-    - icon: twitter
-      text: Twitter
-      href: https://twitter.com/MulwaKenya
     - icon: file-earmark-text
       text: CV
       href: https://kenyamulwa.wordpress.com/wp-content/uploads/2024/04/kenya-mulwa-cv.pdf
+    - icon: mortarboard
+      text: Scholar
+      href: https://scholar.google.com/citations?user=QDUDUzMAAAAJ&hl=en
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/kenya-mulwa/
 ---
 
-I’m a third year PhD student at Michigan State University and a member of the Beliefs Systems Lab. My research interests include social/moral decision-making and attributions to discrimination under conditions of uncertainty, impression formation, stereotyping, and intergroup relations more broadly. I’m also interested in advancing and promoting open science practices, philosophy of psychological science, and quantitative/qualitative research methods in psychology. 
+I’m a fourth year PhD student at Michigan State University and a member of the Beliefs Systems Lab. My research interests include social/moral decision-making and attributions to discrimination under conditions of uncertainty, impression formation, stereotyping, and intergroup relations more broadly. I’m also interested in advancing and promoting open science practices, philosophy of psychological science, and quantitative/qualitative research methods in psychology. 
 
 Before coming to MSU, I received a bachelor’s degree in Psychology at Oklahoma State in 2021, and a master’s degree in Cognitive/Affective Psychology at University of Wisconsin Oshkosh in 2023.
 

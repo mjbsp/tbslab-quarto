@@ -1,0 +1,46 @@
+---
+title: "Khaerullah Fadhli Arasy Hasan"
+subtitle: "PhD Student"
+image: ../../img/khaerullahfadhli.jpg
+sortby: "3"
+about:
+  template: trestles
+  image: ../../img/khaerullahfadhli.jpg
+  links:
+    - icon: envelope
+      text: Email
+      href: mailto:khaerullahfadhli@gmail.com
+    - icon: person
+      text: Website
+      href: https://khaerullahfadhli.github.io/portofolio/ 
+    - icon: file-earmark-text
+      text: CV
+      href: https://drive.google.com/file/d/1RdxDbGxEJEem4DWuIIkZzDTSjcy26QcH/view
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/khaerullahfadhli
+    - icon: instagram
+      text: Instagram
+      href: https://instagram.com/khaerullah.fadhli
+    - icon: mortarboard
+      text: Scholar
+      href: https://scholar.google.com/citations?user=LuFKCGsAAAAJ&hl=id&oi=ao
+---
+
+I'm a PhD candidate in the fast-track scholarship program (PMDSU Program, Ministry of Education of the Republic of Indonesia) at Universitas Indonesia. Currently, I'm under the joint supervision of Prof. Dr. Mirra Noor Milla & Whinda Yustisia, Ph.D. (Universitas Indonesia) and Dr. Mark Brandt (Tilburg University). 
+
+I'm broadly interested in network approaches to studying political belief systems, political behavior, and radicalization. My dissertation examines the incentivization pathway to extreme behavior, testing how goal-related motivation and passion type predict self-sacrifice among extremist groups (both violent and non-violent) and the general population. 
+
+I love to connect and collaborate with you! Find me at my personal website.
+
+Find me at my [personal website](https://khaerullahfadhli.github.io/portofolio/ ).
+
+
+```{r}
+#| echo: false
+#| results: asis
+#| warning: false
+#| message: false
+source("../../_pubs.R")
+print_person_pubs("fadhli", path = "../../pubs.csv", heading = "Lab Publications")
+```
