@@ -1,0 +1,36 @@
+---
+title: "Adva Gruenwald"
+subtitle: "PhD Student"
+image: ../../img/gruenwaldadva.jpg
+sortby: "3"
+about:
+  template: trestles
+  image: ../../img/gruenwaldadva.jpg
+  links:
+    - icon: envelope
+      text: Email
+      href: mailto:adva.gruenwald@mail.huji.ac.il
+    - icon: file-earmark-text
+      text: CV
+      href: https://osf.io/kztga/files/3sej4
+    - icon: mortarboard
+      text: Scholar
+      href: https://scholar.google.com/citations?user=VpP5VcYAAAAJ
+
+---
+
+I am a first-year PhD student in Psychology at the Hebrew University, supervised by Prof. Mark Brandt and Prof. Eran Halperin. My research interests center around understanding the psychological antecedents of anti-democratic attitudes and of support for political candidates who erode democratic norms and institutions. I am also broadly interested in how people organize their attitudes and beliefs to serve underlying psychological needs, particularly when these processes carry negative downstream consequences for liberal democracy. A related strand of my work concerns epistemic processes, including the mechanisms through which people come to accept misinformation and conspiracy theories.
+
+Before beginning my PhD, I completed a BA in Philosophy, Politics, and Economics at the Hebrew University, followed by an MA in Psychology.
+
+In my free time I like to play tennis and hike (but that's pretty much the extent of my outdoorsiness!)
+
+
+```{r}
+#| echo: false
+#| results: asis
+#| warning: false
+#| message: false
+source("../../_pubs.R")
+print_person_pubs("kenya", path = "../../pubs.csv", heading = "Lab Publications")
+```
