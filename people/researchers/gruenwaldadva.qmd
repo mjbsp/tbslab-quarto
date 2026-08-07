@@ -1,11 +1,11 @@
 ---
 title: "Adva Gruenwald"
 subtitle: "PhD Student"
-image: ../../img/gruenwaldadva.jpg
+image: ../../img/gruenwaldadva.png
 sortby: "3"
 about:
   template: trestles
-  image: ../../img/gruenwaldadva.jpg
+  image: ../../img/gruenwaldadva.png
   links:
     - icon: envelope
       text: Email
