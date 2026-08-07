@@ -1,11 +1,11 @@
 [
   {
-    "listing": "/people.html",
+    "listing": "/projects.html",
     "items": [
-      "/people/researchers/brandtmark.html",
-      "/people/researchers/khaerullahfadhli.html",
-      "/people/researchers/mulwakenya.html",
-      "/people/mascots/loempia.html"
+      "/projects/beliefsystemdynamics.html",
+      "/projects/lifeexperiences.html",
+      "/projects/worldviewconflict.html",
+      "/projects/improvingpsychsci.html"
     ]
   },
   {
@@ -18,12 +18,13 @@
     ]
   },
   {
-    "listing": "/projects.html",
+    "listing": "/people.html",
     "items": [
-      "/projects/beliefsystemdynamics.html",
-      "/projects/lifeexperiences.html",
-      "/projects/worldviewconflict.html",
-      "/projects/improvingpsychsci.html"
+      "/people/researchers/brandtmark.html",
+      "/people/researchers/gruenwaldadva.html",
+      "/people/researchers/khaerullahfadhli.html",
+      "/people/researchers/mulwakenya.html",
+      "/people/mascots/loempia.html"
     ]
   }
 ]
