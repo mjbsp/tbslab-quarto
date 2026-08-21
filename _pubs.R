@@ -31,8 +31,7 @@ pub_li <- function(row) {
       is_external <- grepl("^https?://", url)
       # local "files/..." paths -> make root-relative so they resolve from any page
       if (!is_external && grepl("^files/", url)) url <- paste0("/", url)
-      tgt <- if (is_external) ' target="_blank" rel="noopener"' else ""
-      sprintf('<a href="%s"%s>%s</a>', url, tgt, label)
+      sprintf('<a href="%s" target="_blank" rel="noopener">%s</a>', url, label)
     }, character(1))
     out <- paste0(out, " ", paste(rendered, collapse = " | "))
   }
