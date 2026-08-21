@@ -24,10 +24,18 @@ pub_li <- function(row) {
   out <- paste0("<li>", row$content)
   links <- c(doi = row$doi, pdf = row$pdf, code = row$code, data = row$data)
   links <- links[!is.na(links) & links != ""]
-  if (length(links))
-    out <- paste0(out, " ",
-                  paste(sprintf('<a href="%s">%s</a>', links, names(links)),
-                        collapse = " | "))
+  if (length(links)) {
+    rendered <- vapply(seq_along(links), function(i) {
+      url <- trimws(links[i])
+      label <- names(links)[i]
+      is_external <- grepl("^https?://", url)
+      # local "files/..." paths -> make root-relative so they resolve from any page
+      if (!is_external && grepl("^files/", url)) url <- paste0("/", url)
+      tgt <- if (is_external) ' target="_blank" rel="noopener"' else ""
+      sprintf('<a href="%s"%s>%s</a>', url, tgt, label)
+    }, character(1))
+    out <- paste0(out, " ", paste(rendered, collapse = " | "))
+  }
   paste0(out, "</li>")
 }
 
