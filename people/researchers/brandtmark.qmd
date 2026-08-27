@@ -9,10 +9,10 @@ about:
   links:
     - icon: envelope
       text: Email
-      href: mailto:brandt15@msu.edu
+      href: mailto:m.j.brandt@tilburguniversity.edu
     - icon: file-earmark-text
       text: CV
-      href: https://osf.io/vn6bw/
+      href: files/cvs/Brandt_CV.pdf
     - icon: cloud
       text: Bluesky
       href: https://bsky.app/profile/mjbsp.bsky.social

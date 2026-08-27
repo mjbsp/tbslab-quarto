@@ -18,15 +18,15 @@ listing:
 
 ```{=html}
 <div class="hero-socials">
-  <a href="mailto:brandt15@msu.edu" title="Email"><i class="bi bi-envelope-fill"></i></a>
+  <a href="mailto:m.j.brandt@tilburguniversity.edu" title="Email"><i class="bi bi-envelope-fill"></i></a>
   <a href="https://bsky.app/profile/mjbsp.bsky.social" title="Bluesky" target="_blank" rel="noopener"><i class="bi bi-bluesky"></i></a>
   <a href="https://www.linkedin.com/in/mark-brandt-4a7b30350/" title="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
 </div>
 ```
 
 ::: {.lab-affil}
-[Department of Psychology](https://psychology.msu.edu/){target="_blank" rel="noopener"}\
-[Michigan State University](https://msu.edu/){target="_blank" rel="noopener"}
+[Department of Social Psychology](https://www.tilburguniversity.edu/about/schools/socialsciences/organization/departments/social-psychology){target="_blank" rel="noopener"}\
+[Tilburg University](https://www.tilburguniversity.edu){target="_blank" rel="noopener"}
 :::
 :::
 
